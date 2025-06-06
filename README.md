@@ -54,18 +54,11 @@ Principais modelos e usecases da aplicação:
 - `TaxCalculatorOrchestrationUseCase`: Orquestrador que converte o input para o modelo `OperationEvent`, chama os usecases responsáveis conforme o tipo de operação (VENDA ou COMPRA) e converte o resultado para o DTO de output. Adicionei um terminário para decidir qual usecase chamar, mas poderia ter sido uma lista e um tipo de processamento mais strategy, mas deixei simples mesmo. Usei .reduce() para ir processando e incrementando os eventos.
 - `SellCalculatorUseCase` e `BuyCalculatorUseCase`: UseCases que possuem as logicas especificas para cada tipo de Operação. Extendem o `CalculatorUseCaseAbstract` que usa Template Method no metodo `process()`;
 
-
-Percebi ao final do desafio, que seria possível já implementar um package `adapter` implementando alguma interface no package `port`. Mas, mantive mais direto com alguns códigos na classe `Main` que poderiam ser abstraídos de lá. 
-
-Deixei um `todo` no orquestrador referente ao requisito de a ultima entrada ser uma linha vazia. Eu iria questionar melhor sobre esse requisito.
-
 Utilizei um validador bem simples para validar os campos de entrada.
-
-Removi total o .git pra ficar mais "limpa" a entrega. Mas se precisar, tenho o repositório privado no meu GitHub.
 
 ## Cases
 
-Segue abaixo os inputs sem quebra de linha que tem no PDF para facilitar os testes.
+Segue abaixo alguns inputs de cases para calculo:
 
 ### Case 1 
 
